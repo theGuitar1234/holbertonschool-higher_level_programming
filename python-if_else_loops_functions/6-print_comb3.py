@@ -2,7 +2,7 @@
 first = 0
 second = 1
 
-for _ in range(45):
+for i in range(45):
     if (i == 45):
         print("{}{}".format(first, second), end="")
     print("{}{}".format(first, second) + ", ", end="")
