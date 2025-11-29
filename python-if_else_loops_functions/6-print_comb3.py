@@ -4,7 +4,7 @@ second = 1
 
 for i in range(45):
     if (first == 8 and second == 9):
-        print("{}{}".format(first, second), end="")
+        print("{}{}".format(first, second) + " ", end="")
         continue
     print("{}{}".format(first, second) + ", ", end="")
 
