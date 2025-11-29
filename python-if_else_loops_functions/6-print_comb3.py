@@ -3,7 +3,7 @@ first = 0
 second = 1
 
 for _ in range(45):
-    print("{}{}".format(first, second))
+    print("{}{}".format(first, second) + ", ", end="")
 
     second += 1
     if second == 10:      
