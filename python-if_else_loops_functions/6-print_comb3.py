@@ -5,6 +5,7 @@ second = 1
 for i in range(45):
     if (i == 45):
         print("{}{}".format(first, second), end="")
+        continue
     print("{}{}".format(first, second) + ", ", end="")
 
     second += 1
