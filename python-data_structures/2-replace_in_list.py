@@ -8,3 +8,4 @@ def replace_in_list(my_list, idx, element):
     elif idx >= len(my_list):
         return None
     my_list[idx] = element
+    return my_list
