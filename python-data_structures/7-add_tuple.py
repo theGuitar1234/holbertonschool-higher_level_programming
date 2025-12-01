@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def print_matrix_integer(tuple_a=(), tuple_b=()):
+def add_tuple(tuple_a=(), tuple_b=()):
 
     if len(tuple_a) == 1:
         tuple_a + (0)
