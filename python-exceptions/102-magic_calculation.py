@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def mystery(a, b):
+def magic_calculation(a, b):
     result = 0
 
     for i in range(1, 3):
