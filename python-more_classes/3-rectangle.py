@@ -67,7 +67,7 @@ class Rectangle:
             for j in range(self.__width):
                 str += "#"
             str += "\n"
-        return str
+        return str[:-1]
 
     def __print__(self):
         if self.__size == 0:
