@@ -107,7 +107,7 @@ class Rectangle:
     @staticmethod
     def square(size):
         if not isinstance(size, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("width must be an integer\nBye rectangle...")
         elif size < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("width must be >= 0\nBye rectangle...")
         return Rectangle(size, size)
