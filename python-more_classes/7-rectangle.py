@@ -62,7 +62,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return self.__width*2 + self.__height*2
-    
+
     def __str__(self):
         str = ""
         if self.__height == 0 or self.__width == 0:
@@ -81,10 +81,10 @@ class Rectangle:
             for j in range(self.__width):
                 print(f"{self.print_symbol}", end="")
             print()
-    
+
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
-    
+
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
