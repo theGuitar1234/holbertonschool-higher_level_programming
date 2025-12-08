@@ -81,6 +81,7 @@ class Rectangle:
             for j in range(self.__width):
                 print(f"{self.print_symbol}", end="")
             print()
+        del self
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
@@ -109,5 +110,4 @@ class Rectangle:
             raise TypeError("width must be an integer")
         elif size < 0:
             raise ValueError("width must be >= 0")
-        del
         return Rectangle(size, size)
