@@ -109,4 +109,5 @@ class Rectangle:
             raise TypeError("width must be an integer")
         elif size < 0:
             raise ValueError("width must be >= 0")
+        print("Bye rectangle...")
         return Rectangle(size, size)
