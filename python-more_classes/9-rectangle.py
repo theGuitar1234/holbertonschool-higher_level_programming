@@ -104,10 +104,10 @@ class Rectangle:
             return rect_2
 
     @staticmethod
-    def square(size):
+    def square(cls, size):
         if not isinstance(size, int):
             raise TypeError("width must be an integer")
         elif size < 0:
             raise ValueError("width must be >= 0")
-        print("Bye rectangle...")
+        del cls
         return Rectangle(size, size)
