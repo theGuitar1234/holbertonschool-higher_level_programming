@@ -4,9 +4,4 @@
 def is_same_class(obj, a_class):
     """Checks if the value belongs the a-class"""
 
-    if isinstance(type(obj), a_class):
-        return True
-    elif type(obj) == a_class:
-        return True
-    else:
-        return False
+    return obj.__class__ is a_class
