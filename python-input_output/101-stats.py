@@ -9,6 +9,8 @@ def print_stats(size, status_codes):
         print("{}: {}".format(key, status_codes[key]))
 
 if __name__ == "__main__":
+
+
     import sys
 
     size = 0
