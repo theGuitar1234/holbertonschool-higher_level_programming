@@ -3,7 +3,11 @@
 
 
 class BaseGeometry:
-    """Reprsent base geometry."""
+    """Represent base geometry."""
+
+    def __init__(self, *args, **kwargs):
+        if args or kwargs:
+            raise TypeError("object() takes no parameters")
 
     def area(self):
         """Not yet implemented."""
