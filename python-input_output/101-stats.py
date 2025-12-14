@@ -8,11 +8,9 @@ def print_stats(size, status_codes):
     for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
 
+
 if __name__ == "__main__":
-
-
     import sys
-
 
     size = 0
     status_codes = {}
@@ -21,27 +19,24 @@ if __name__ == "__main__":
 
     try:
         for line in sys.stdin:
-            if count == 10:
-                print_stats(size, status_codes)
-                count = 1
-            else:
-                count += 1
-
-            line = line.split()
+            count += 1
+            parts = line.split()
 
             try:
-                size += int(line[-1])
+                size += int(parts[-1])
             except (IndexError, ValueError):
                 pass
 
             try:
-                if line[-2] in valid_codes:
-                    if status_codes.get(line[-2], -1) == -1:
-                        status_codes[line[-2]] = 1
-                    else:
-                        status_codes[line[-2]] += 1
+                code = parts[-2]
+                if code in valid_codes:
+                    status_codes[code] = status_codes.get(code, 0) + 1
             except IndexError:
                 pass
+
+            if count == 10:
+                print_stats(size, status_codes)
+                count = 0
 
         print_stats(size, status_codes)
 
