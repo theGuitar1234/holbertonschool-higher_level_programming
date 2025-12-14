@@ -6,8 +6,11 @@ class MyList(list):
     """Implements sorted printing for the built-in list class."""
 
     def __init__(self, *args):
+        # Force the exact legacy TypeError message the doctest expects
         if len(args) > 1:
-            raise TypeError(f"list() takes at most 1 argument ({len(args)} given)")
+            raise TypeError(
+                "list() takes at most 1 argument ({} given)".format(len(args))
+            )
         super().__init__(*args)
 
     def print_sorted(self):
@@ -17,10 +20,14 @@ class MyList(list):
         except TypeError as exc:
             msg = str(exc)
 
+            # Python 3 message example:
+            # "'<' not supported between instances of 'str' and 'int'"
             parts = msg.split("'")
             if len(parts) >= 6 and parts[1] == "<":
                 left = parts[3]
                 right = parts[5]
-                raise TypeError(f"unorderable types: {left}() < {right}()") from None
+                raise TypeError(
+                    "unorderable types: {}() < {}()".format(left, right)
+                ) from None
 
             raise
