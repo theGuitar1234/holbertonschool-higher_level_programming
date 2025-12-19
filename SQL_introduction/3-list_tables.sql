@@ -1,0 +1,2 @@
+-- afsgfds
+SHOW TABLES;
