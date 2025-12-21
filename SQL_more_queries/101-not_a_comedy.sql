@@ -1,10 +1,8 @@
 -- kasdhjfkjd
-SELECT title
-FROM tv_shows
+SELECT title FROM tv_shows
 WHERE id NOT IN (
-    SELECT tv_show_id
-    FROM tv_show_genres
-    JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
-    WHERE tv_genres.name = 'Comedy'
+    SELECT id FROM tv_genres g1
+    JOIN tv_genres g2 ON g1.genre_id = g2.id
+    WHERE g1.name = 'Comedy'
 )
 ORDER BY title;
