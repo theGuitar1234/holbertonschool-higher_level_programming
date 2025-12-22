@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Defines a class-checking function."""
+"""Defines something? idk"""
 
 
 def is_same_class(obj, a_class):
-    """Checks if the value belongs the a-class"""
+    """some explanatrion"""
 
     return obj.__class__ is a_class
