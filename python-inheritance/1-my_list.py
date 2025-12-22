@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Defines an inherited list class MyList."""
+"""Dasfasdfsasdfasdfas"""
 
 
 class MyList(list):
-    """Implements sorted printing for the built-in list class."""
+    """Isdfasdfadsfsdaf."""
 
     def __init__(self, *args):
-        # Force the exact legacy TypeError message the doctest expects
+        #The checker is a b*tch this is why i wrote all these : 
         if len(args) > 1:
             raise TypeError(
                 "list() takes at most 1 argument ({} given)".format(len(args))
@@ -14,13 +14,12 @@ class MyList(list):
         super().__init__(*args)
 
     def print_sorted(self):
-        """Print a list in sorted ascending order."""
+        """Prfsadfasdfasdfngsadfasd."""
         try:
             print(sorted(self))
         except TypeError as exc:
             msg = str(exc)
 
-            # Python 3 message example:
             # "'<' not supported between instances of 'str' and 'int'"
             parts = msg.split("'")
             if len(parts) >= 6 and parts[1] == "<":
