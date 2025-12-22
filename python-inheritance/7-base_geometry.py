@@ -1,20 +1,20 @@
 #!/usr/bin/python3
-"""Defines a base geometry class BaseGeometry."""
+"""It is in the fricking code brother! Read it an you'll get an idea of what it does!"""
 
 
 class BaseGeometry:
-    """Represent base geometry."""
+    """Represents"""
 
     def __init__(self, *args, **kwargs):
         if args or kwargs:
             raise TypeError("object() takes no parameters")
 
     def area(self):
-        """Not yet implemented."""
+        """Not yet implementeds"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validate a parameter as an integer."""
+        """Validates"""
         if value.__class__ != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
