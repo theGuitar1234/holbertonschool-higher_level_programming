@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Defines an inherited class-checking function."""
+"""Don't use this, it is garbage code"""
 
 
 def inherits_from(obj, a_class):
 
-    """Checks if an object is an inherited instance of a class.i"""
+    """Checks something"""
     if issubclass(type(obj), a_class) and obj.__class__ != a_class:
         return True
     return False
